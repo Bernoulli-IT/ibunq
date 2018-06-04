@@ -9,7 +9,7 @@
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-        
+
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -30,14 +30,94 @@
 </head>
 <body>
     <style>
-        img {
+        body {
+            margin: 0;
+        }
+
+        #wrapper {
+            width: 364px;
+            height: 126px;
+            max-width: 90%;
+            max-height: 90%;
             position: absolute;
             top: 50%;
             left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            max-width: 100%;
+        }
+
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        #background {
+            -ms-animation: move 0.5s infinite;
+            -webkit-animation: move 0.5s infinite;
+            animation: move 0.5s infinite;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-direction: alternate-reverse;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes move {
+            0%, 20% {
+                -ms-transform: translate(0, 0);
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+
+            80%, 100% {
+                -ms-transform: translate(100%, 0);
+                -webkit-transform: translate(100%, 0);
+                transform: translate(100%, 0);
+            }
         }
     </style>
-    <img src="/images/logo.png" />
+    <div id="wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1820 630">
+            <defs>
+                <mask id="maskBrandText" fill-rule="evenodd" fill="black">
+                    <!-- reveal a complete rectangle -->
+                    <rect width="1820px" height="630px" fill="white"></rect>
+
+                    <!-- cutout the characters ibunq! -->
+                    <path id="_" d="M0,140H70V490H0V140ZM0,0H70V70.005H0V0Z" />
+                    <path id="q" d="M1679,144.929V303.681h-0.27c0.18,2.919.27,5.864,0.27,8.819V630h-70.67V453.586a175.959,175.959,0,0,1-106,35.3c-97.52,0-176.67-79.04-176.67-176.39s79.15-176.39,176.67-176.39a175.975,175.975,0,0,1,111.39,39.538l3.44-30.719H1679ZM1396.33,312.5c0-63.28,49.47-114.654,110.42-114.654S1617.16,249.22,1617.16,312.5s-49.46,114.654-110.41,114.654S1396.33,375.78,1396.33,312.5Z" />
+                    <path id="n" d="M944.833,485.071V299.861c0-87.613,71.247-158.751,159-158.751s159,71.138,159,158.751v185.21h-70.67V299.861c0-53.543-39.58-97.015-88.33-97.015s-88.33,43.472-88.33,97.015v185.21H944.833Z" />
+                    <path id="u" d="M877.167,149.929v185.21c0,87.613-71.249,158.751-159,158.751s-159-71.138-159-158.751V149.929h70.666v185.21c0,53.543,39.582,97.015,88.333,97.015S806.5,388.682,806.5,335.139V149.929h70.666Z" />
+                    <path id="b" d="M140,485.071V326.319h0.265C140.093,323.4,140,320.455,140,317.5V0h70.667V176.414a175.963,175.963,0,0,1,106-35.3c97.519,0,176.666,79.04,176.666,176.39S414.189,493.89,316.67,493.89a175.957,175.957,0,0,1-111.388-39.538l-3.445,30.719H140ZM422.669,317.5c0,63.28-49.466,114.654-110.416,114.654S201.837,380.78,201.837,317.5,251.3,202.846,312.253,202.846,422.669,254.22,422.669,317.5Z" />
+                    <path id="i" d="M1750,140h70V490h-70V140Zm70,490h-70V560h70V630Z" />
+                </mask>
+
+                <g id="rectColors">
+                    <path id="pink-1" d="M-0.000,0.000 L70.000,0.000 L70.000,630.000 L-0.000,630.000 L-0.000,0.000 z" fill="#FF34B2" />
+                    <path id="green-1" d="M70.000,0.000 L257.000,0.000 L257.000,630.000 L70.000,630.000 L70.000,0.000 z" fill="#238647" />
+                    <path id="green-2" d="M257.000,0.000 L373.000,0.000 L373.000,630.000 L257.000,630.000 L257.000,0.000 z" fill="#2F9B47" />
+                    <path id="green-3" d="M373.000,0.000 L490.000,0.000 L490.000,630.000 L373.000,630.000 L373.000,0.000 z" fill="#62B64F" />
+                    <path id="green-4" d="M490.000,0.000 L664.000,0.000 L664.000,630.000 L490.000,630.000 L490.000,0.000 z" fill="#89CC53" />
+                    <path id="blue-1" d="M664.000,0.000 L770.000,0.000 L770.000,630.000 L664.000,630.000 L664.000,0.000 z" fill="#3DB8AD" />
+                    <path id="blue-2" d="M770.000,0.000 L910.000,0.000 L910.000,630.000 L770.000,630.000 L770.000,0.000 z" fill="#3394D7" />
+                    <path id="blue-3" d="M910.000,0.000 L1050.000,0.000 L1050.000,630.000 L910.000,630.000 L910.000,0.000 z" fill="#2872BC" />
+                    <path id="blue-4" d="M1050.000,0.000 L1155.000,0.000 L1155.000,630.000 L1050.000,630.000 L1050.000,0.000 z" fill="#1D5C84" />
+                    <path id="red-1" d="M1155.000,0.000 L1330.000,0.000 L1330.000,630.000 L1155.000,630.000 L1155.000,0.000 z" fill="#993233" />
+                    <path id="red-2" d="M1330.000,0.000 L1447.000,0.000 L1447.000,630.000 L1330.000,630.000 L1330.000,0.000 z" fill="#E13030" />
+                    <path id="orange" d="M1447.000,0.000 L1563.000,0.000 L1563.000,630.000 L1447.000,630.000 L1447.000,0.000 z" fill="#F28825" />
+                    <path id="gold" d="M1563.000,0.000 L1750.000,0.000 L1750.000,630.000 L1563.000,630.000 L1563.000,0.000 z" fill="#F5C836" />
+                    <path id="pink-2" d="M1750.000,0.000 L1820.000,0.000 L1820.000,630.000 L1750.000,630.000 L1750.000,0.000 z" fill="#FF34B2" />
+                </g>
+            </defs>
+
+            <g id="background">
+                <use xlink:href="#rectColors" x="-100%"></use>
+                <use xlink:href="#rectColors"></use>
+            </g>
+
+            <rect width="1820px" height="630px" mask="url(#maskBrandText)" fill="white"></rect>
+        </svg>
+    </div>
 </body>
 </html>
